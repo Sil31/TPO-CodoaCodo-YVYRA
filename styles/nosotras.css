@@ -1,0 +1,341 @@
+/* colors:
+rosa: rgb(232,203,197)
+naranja: rgb(171,110,82)
+verde: rgb(27,68,52)
+gris: rgb(51,51,51) */
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
+
+*,
+html {
+    top: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+body {
+    width: 100%;
+    top:0;
+    background-color: rgb(232, 203, 197);
+}
+
+/* NAV */
+
+.header {
+    background: #333;
+    color: #e8cbc5;
+    padding: 10px 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.header a {
+    color: #e8cbc5;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.nav-container a img {
+    width: 100px;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #e8cbc5;
+    font-family: 'Syncopate', sans-serif;
+    font-weight: bold;
+    transition: all 0.4s linear;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background: rgb(232, 203, 197, 0.2);
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+}
+#menu-btn{
+    display: none;
+}
+
+/* HEADER */
+
+#leyenda {
+    width: 100%;
+    font-size: 42px;
+    font-family: 'Syncopate', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(51, 51, 51);
+    margin-top: 100PX;
+}
+
+/* AVATARES */
+
+#avatares {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "avatar1" "avatar2" "avatar3";
+    padding: 15px;
+    margin: 15px;
+}
+.avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+    font-family: 'Syncopate', sans-serif;
+    color: rgb(51, 51, 51);
+    text-align: center;
+}
+
+.avatar img{
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPCION */
+#descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(51, 51, 51);
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background: rgb(51, 51, 51);
+    color: #e8cbc5;
+    align-items: center;
+}
+
+#contenedor-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+    grid-template-areas: "redesSociales datos mapa";
+    padding: 15px;
+    margin: 10px;
+}
+
+#redesSociales {
+    grid-area: redesSociales;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#redesSociales img {
+    width: 200px;
+}
+
+#datos {
+    grid-area: datos;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#datos ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#datos ul li {
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+#mapa {
+    grid-area: mapa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#mapa iframe {
+    width: 80%;
+    max-height: 200px;
+    margin-left: 15px;
+}
+
+#iconos a {
+    color: #e8cbc5;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media (max-width:425px) {
+
+    #avatares {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "avatar1""avatar2""avatar3";
+        padding: 15px;
+        margin: auto;
+        row-gap: 5px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    #avatar1 {
+        grid-area: avatar1;
+    }
+    #avatar2 {
+        grid-area: avatar2;
+    }
+    #avatar3 {
+        grid-area: avatar3;
+    }
+
+    .footer {
+        width: 100%;
+        justify-items: stretch;
+    }
+
+    #datos ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #descripcion{
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    
+    .footer {
+        width: 100%;
+        justify-items: stretch;
+    }
+
+    #contenedor-footer {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-areas: "redesSociales""datos";
+        flex-direction: column;
+        padding: 15px;
+        margin: 10px;
+        row-gap: 10px;
+    }
+
+    #datos ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mapa {
+        display: none;
+    }
+
+    #descripcion {
+        font-size: 20px;
+    }
+}
+
+
+
+@media only screen and (max-width:768px) {
+    #leyenda {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .navigation {
+        width: 100vw;
+        margin-top: 1rem;
+        position: absolute;
+        margin-top: 55px;
+        margin-left: -110%;
+        transition: all 0.5;
+    }
+
+    .navigation ul {
+        display: block;
+        flex-direction: column;
+        right: 0;
+        background: #333;
+    }
+    .navigation ul.show {
+        display: block;
+    }
+    .navigation ul li {
+        display: block;
+    }
+
+    .navigation ul li a {
+        display: block;
+        padding: 0.5rem 0;
+        color: #e8cbc5;
+        font-family: 'Syncopate', sans-serif;
+        font-weight: bold;
+        transition: all 0.4s linear;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    nav ul li a:hover {
+        background: rgb(232, 203, 197, 0.2);
+        border-radius: 5px;
+    }
+    #menu-btn{
+        display: none;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+
+    #menu-btn:checked ~ .navigation{
+        margin-left: 0%;
+    }
+    .avatar{
+        font-size: 12px;
+    }
+
+    #mapa {
+        display: none;
+    }
+    .avatar img{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+}
