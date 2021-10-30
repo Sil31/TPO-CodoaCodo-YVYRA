@@ -86,7 +86,7 @@ nav ul li a:hover {
     position: relative;
     width: 100%;
     background-color: rgb(51, 51, 51);
-    margin-bottom: 20px auto;
+    margin-bottom: 100px auto;
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -142,7 +142,7 @@ nav ul li a:hover {
 a {
     text-decoration: none;
     color: #e8cbc5;
-    font-size: 24px;
+    font-size: 18px;
     font-family: 'Syncopate', sans-serif;
 }
 
