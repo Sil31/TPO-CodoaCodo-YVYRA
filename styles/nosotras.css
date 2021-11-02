@@ -332,9 +332,6 @@ nav ul li a:hover {
         font-size: 12px;
     }
 
-    #mapa {
-        display: none;
-    }
     .avatar img{
         width: 50%;
         margin-bottom: 10px;
